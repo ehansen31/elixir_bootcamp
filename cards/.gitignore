@@ -23,3 +23,5 @@ erl_crash.dump
 cards-*.tar
 
 .elixir_ls/
+
+my_deck
