@@ -13,9 +13,11 @@ defmodule Identicon do
     %Identicon.Image{hex: hex}
   end
 
-  def pick_color(image) do
-    %Identicon.Image{hex: hex_list} = image
-    [r, g, b | _tail] = hex_list
+  def pick_color(%Identicon.Image{hex: [r, g, b | _tail]} = image) do
     %Identicon.Image{image | color: {r, g, b}}
+  end
+
+  def build_grid(image) do
+    
   end
 end
