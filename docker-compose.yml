@@ -1,7 +1,7 @@
 version: "3"
 services:
   db:
-    image: "postgres:11.6"
+    image: "postgres:9.5.10"
     container_name: "elixir_bootcamp_psql"
     environment:
       - POSTGRES_USER=user
