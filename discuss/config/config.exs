@@ -33,6 +33,6 @@ providers: [
   }
 ]
 
-config :ueberauth, Ueberauth.Strategy.Github.Oauth,
+config :ueberauth, Ueberauth.Strategy.Github.OAuth,
 client_id: "5a8ca7ce40da4c0ee59e",
 client_secret: "c9ab3f2ae6660914e122f61f34ff39a40a16d1b3"

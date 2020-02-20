@@ -11,9 +11,9 @@ config :discuss, Discuss.Endpoint,
   debug_errors: true,
   code_reloader: true,
   check_origin: false,
-  watchers: [node: ["node_modules/brunch/bin/brunch", "watch", "--stdin",
-                    cd: Path.expand("../", __DIR__)]]
-
+  watchers: [
+    node: ["node_modules/brunch/bin/brunch", "watch", "--stdin", cd: Path.expand("../", __DIR__)]
+  ]
 
 # Watch static and templates for browser reloading.
 config :discuss, Discuss.Endpoint,
@@ -42,3 +42,8 @@ config :discuss, Discuss.Repo,
   hostname: "localhost",
   port: 5432,
   pool_size: 10
+
+  config :ueberauth, Ueberauth,
+  providers: [
+    github: {Ueberauth.Strategy.Github, [allow_private_emails: true]}
+  ]
